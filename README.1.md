@@ -17,4 +17,4 @@ WebPack可以看做是模块打包机：它做的事情是，分析你的项目�
 webpack4.0特有 npm i webpack webpack-cli
 不能这直接在命令行运行，运行的方法：
     方法1 npx可以直接运行node_moudules/.bin目录下的文件，
-    方法2，可以通过配置package.json 'build':'webpack'
+    方法2，可以通过配置package.json 'build':'webpack --node production'(生产)，， "build": "webpack --mode development" （开发）
