@@ -15,14 +15,17 @@ module.exports = {
                 // css-loader用来解析处理css文件中的URL处理路径，要把一个css文件变成一个模块
                 // style-loader可把css文件变成style标签插入header中
                 // 多个loader是有顺序的，从右往左写，因为转化的时候是葱油往左转换
-                loader: ['style-loader', 'css-loader'] // 两个一个不能少
+                loader: ['css-loader', 'style-loader'] // 两个一个不能少
             },
         ]
     },
     piugins:  [ // 插件
 
     ],
-    devSever: { // 开擦服务器
-
+    devSever: { // 配置京台文件服务器，可以用来预览打包后的项目
+        contentBase: './dist',
+        host: 'localhost',
+        port: '8080',
+        compress: true, // 服务器返回给浏览器的时候是否启动gzip压缩
     }
 }
