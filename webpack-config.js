@@ -3,7 +3,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 // webpack内部有一个事件流
 
 module.exports = {
-    entry: './src/index.js', // 入口
+    // entry: './src/index.js', // 入口
+    entry: ['./src/index.js', './src/base.js'], // 多入口
     output: { // 输出
         path: path.join(__dirname, 'dist'), // 输出的文件夹，只能是绝对路径 
         // filename: 'bundle.js' // 打包后的文件名
