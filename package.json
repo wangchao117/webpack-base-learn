@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/wangchao117/webpack-base-learn/issues"
   },
-  "homepage": "https://github.com/wangchao117/webpack-base-learn#readme"
+  "homepage": "https://github.com/wangchao117/webpack-base-learn#readme",
+  "devDependencies": {
+    "webpack": "^4.26.0",
+    "webpack-cli": "^3.1.2"
+  }
 }
