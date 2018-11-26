@@ -4,7 +4,14 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
     // entry: './src/index.js', // 入口
-    entry: ['./src/index.js', './src/base.js'], // 多入口
+    // entry: ['./src/index.js', './src/base.js'], 
+    // 放一对象，多入口
+    entry: {
+        // 先找到每个入口（entry），然后从各个入口分别触发，找到依赖的模块(moudle)
+        // 然后生成一个Chunk（代码块），最后会把chunk写到系统文件中（Assets）
+        index: './src/index.js',
+        base: './src/base.js'
+    }, 
     output: { // 输出
         path: path.join(__dirname, 'dist'), // 输出的文件夹，只能是绝对路径 
         // filename: 'bundle.js' // 打包后的文件名
